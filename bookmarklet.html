@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sort by Review Count Bookmarklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .bookmarklet {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <a class="bookmarklet" href="javascript:(function(){if(window.location.hostname.includes('amazon')){let currentUrl=window.location.href;if(!currentUrl.includes('&sort=review-count-rank')){let newUrl=currentUrl+(currentUrl.includes('?')?'&':'?')+'sort=review-count-rank';window.location.href=newUrl;}}else{alert('This bookmarklet only works on Amazon pages.');}})();">
+        Sort Amazon by Review Count
+    </a>
+    <p>Drag this button to your bookmarks bar!</p>
+</body>
+</html>
